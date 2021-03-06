@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Direct Child (First Born) */
+div > p {
+  background: #ddd;
+}
+
+/* Directly After (Next Sibling) */
+div + p {
+  background: #333;
+  color: #fff;
+}
+
+/* By Attribute */
+
+a[target] {
+  background: #ff0000;
+  color: #fff;
+}
+
+/* Specific Attribute Value */
+input[type='text'],
+input[type='email'] {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* Child Selectors */
+.list li {
+  padding: .25rem;
+  margin: .25rem;
+  list-style: none;
+}
+
+.list li:first-child {
+  background: #f4f4f4;
+}
+
+.list li:last-child {
+  background: #f4f4f4;
+}
+
+.list li:nth-child(5) {
+  background: lightblue !important; 
+}
+
+/* Every 3 */
+.list li:nth-child(3n+0) {
+  background: orange;
+}
+
+/* Every 3 after 7 */
+.list li:nth-child(3n+7) {
+  background: lightgreen;
+}
+
+/* Every Odd */
+.list li:nth-child(odd) {
+  background: lightcoral
+}
+
+/* Before and After */
+.is-required:after {
+  content: '*';
+  color: red;
+  padding-left: .25rem;
+}
+
+.body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #333;
+  color: white;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
+
+.body header:before {
+  content:'';
+  background: url('https://source.unsplash.com/1600x900/?nature,water') no-repeat center center/cover;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+header > h1 {
+  font-size: 4rem;
+  margin: 1rem;
+}
+
+/* BOX SHADOW */
+
+.container {
+  display: flex;
+}
+
+.box {
+  padding: 1rem;
+  margin: 1rem;
+  background: coral;
+  color: #fff;
+
+  /* offset-x | offset-y | color */
+  box-shadow: 10px 10px teal;
+
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 10px 10px 20px teal;
+
+    /* offset-x | offset-y | blur-radius spread-radius | color */
+    box-shadow: 3px 3px 10px 1px rgba(0,0,0,0.3);
+
+      /* inset | offset-x | offset-y | color */
+  box-shadow: inset -3px -3px teal;
+
+}
+
