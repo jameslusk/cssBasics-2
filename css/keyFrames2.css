@@ -2,14 +2,23 @@ body {
   background: #333;
 }
 
+a {
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+}
+
 .box {
- background: #fff;
- width: 200px;
- height: 200px;
- position: relative;
- top: 0;
- left: 0;
- animation: animate1 5s forwards ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 0;
+  left: 0;
+  animation: animate1 5s forwards ease-in-out;
 }
 
 @keyframes animate1 {
