@@ -129,3 +129,29 @@ header > h1 {
 
 }
 
+/* TEXT SHADOW */
+
+.text-shadow h1 {
+  font: 3rem Arial, Helvetica, sans-serif;
+}
+
+h1.a {
+  /* h-shadow | v-shadow | color */
+  text-shadow: .2rem .2rem steelblue
+}
+
+h1.b {
+  /* h-shadow | v-shadow | blur | color */
+  text-shadow: .4rem .3rem .7rem steelblue;
+}
+
+h1.c {
+  /* white text */
+  color: white;
+  text-shadow: .2rem .2rem 1rem steelblue;
+}
+
+h1.d {
+  /* Negative Values */
+  text-shadow: -.4rem -.3rem .7rem steelblue;
+}
