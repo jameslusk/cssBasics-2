@@ -5,12 +5,12 @@
 }
 
 /* Direct Child (First Born) */
-div > p {
+#parent div > p {
   background: #ddd;
 }
 
 /* Directly After (Next Sibling) */
-div + p {
+#parent div + p {
   background: #333;
   color: #fff;
 }
@@ -154,4 +154,39 @@ h1.c {
 h1.d {
   /* Negative Values */
   text-shadow: -.4rem -.3rem .7rem steelblue;
+}
+
+/* CSS VARIABLES */
+
+:root {
+  --primary-color: steelblue;
+  --secondary-color: skyblue;
+  --light-color: #f4f4f4;
+  --max-width: 1100px;
+}
+
+.customs {
+  line-height: 1.4;
+  background: var(--light-color);
+}
+
+.customs div > h1{
+  background: var(--primary-color);
+  border-bottom: 5px var(--secondary-color) solid; 
+  color: white;
+  text-align: center;
+}
+
+.container1 {
+  display: flex;
+  margin: auto;
+  max-width: var(--max-width);
+}
+
+.boxes {
+  background: var(--primary-color);
+  border-bottom: 5px var(--secondary-color) solid;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
 }
